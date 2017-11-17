@@ -18,6 +18,7 @@ class Student(Base):
     def __repr__(self):
         return "<%s name:%s>" %(self.id,self.name)
 
+#abc
 class StudyRecord(Base):
     __tablename__="study_record"
     id = Column(INTEGER, primary_key=True)
