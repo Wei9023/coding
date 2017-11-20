@@ -17,3 +17,5 @@ session.add_all([c1,c2])
 
 session.commit()
 session.close()
+
+print("hi")
