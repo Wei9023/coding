@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="a1">Tony&nbsp;loves&nbsp;Valentina&nbsp;very&nbsp;much&nbsp;</div>
+    <script>
+        var mywords = setInterval(function(){mytimer()},300);
+        function mytimer() {
+            var tag = document.getElementById('a1');
+            var content = tag.innerText;
+            var f = content.charAt(0);
+            var l = content.substring(1, content.length);
+            var new_content = l + f;
+            tag.innerText = new_content;
+        }
+    </script>
+</body>
+</html>

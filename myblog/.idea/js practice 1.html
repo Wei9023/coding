@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 9;
+        }
+        .c2{
+            position: fixed;
+            width: 500px;
+            height: 400px;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -200px;
+            background-color: pink;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body style="margin:0">
+    <div>
+        <input type="button" value="chooseall" onclick="chooseall()"/>
+        <input type="button" value="cancleall" onclick="cancleall()"/>
+        <input type="button" value="reverseall" onclick="reverseall()"/>
+        <table>
+            <thead>
+                <tr>
+                    <th>checkbox</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Sex</th>
+                </tr>
+            </thead>
+            <tbody id="tb">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Tony</td>
+                    <td>35</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Valentina</td>
+                    <td>25</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Yibo</td>
+                    <td>3</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <input type="button" value="Login" onclick="showmodel()"/>
+    </div>
+    <div class="c1 hide" id="i1"></div>
+    <div class="c2 hide" id="i2">
+        <p><input type="text"/></p>
+        <p><input type="text"/></p>
+        <p>
+            <input type="button" value="cancle" onclick="hidemodel()";/>
+            <input type="button" value="confirm"/>
+        </p>
+    </div>
+<script type="text/javascript">
+    //console.log(document.getElementById('i1').classList)
+    function chooseall(){
+        var tbody = document.getElementById('tb');
+        var tr_list = tbody.children;
+        for(var i=0;i<tr_list.length;i++){
+            var current_tr = tr_list[i];
+            var checkbox = current_tr.children[0].firstElementChild;
+            checkbox.checked = true;
+        }
+    }
+
+    function cancleall() {
+        var tbody = document.getElementById('tb');
+        var tr_list = tbody.children;
+        for (var i = 0; i < tr_list.length; i++) {
+            var current_tr = tr_list[i];
+            var checkbox = current_tr.children[0].firstElementChild;
+            checkbox.checked = false;
+        }
+    }
+
+    function reverseall() {
+        var tbody = document.getElementById('tb');
+        var tr_list = tbody.children;
+        for (var i = 0; i < tr_list.length; i++) {
+            var current_tr = tr_list[i];
+            var checkbox = current_tr.children[0].firstElementChild;
+                if (checkbox.checked == true){
+                    checkbox.checked = false;
+                }
+                else{
+                    checkbox.checked = true;
+                }
+        }
+    }
+
+    function showmodel(){
+        document.getElementById('i1').classList.remove('hide');
+        document.getElementById('i2').classList.remove('hide');
+    }
+    function hidemodel() {
+        document.getElementById('i1').classList.add('hide');
+        document.getElementById('i2').classList.add('hide');
+    }
+</script>
+
+</body>
+</html>

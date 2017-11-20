@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header{
+            color:white;
+            background-color: mediumslateblue;
+        }
+        .content{
+            background-color: pink;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+
+</head>
+<body style="height:100px; width: 200px; ">
+    <div>
+        <div class="item">
+            <div class="header">NEW CARS</div>
+            <div class="content hide">
+                <p>Audi</p>
+                <p>BMW</p>
+                <p>Cadillac</p>
+                <p>Lexus</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header">USED CARS</div>
+            <div class="content hide">
+                <a>Audi</a>
+                <a>BMW</a>
+                <a>Cadillac</a>
+                <a>Lexus</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header">CERTIFICATED CARS</div>
+            <div class="content hide">
+                <a>Audi</a>
+                <a>BMW</a>
+                <a>Cadillac</a>
+                <a>Lexus</a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="header">UPCOMING CARS</div>
+            <div class="content hide">
+                <a>Audi</a>
+                <a>BMW</a>
+                <a>Cadillac</a>
+                <a>Lexus</a>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+
+        $(this).click(function () {
+            //console.log(this);
+            $(this).next().removeClass('hide');
+            $(this).parent().siblings().find('content').addClass('hide');
+        })
+
+    </script>
+</body>
+</html>

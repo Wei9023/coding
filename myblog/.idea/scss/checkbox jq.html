@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check jquery</title>
+    <style>
+        .btn{
+            background-color: mediumslateblue;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input class="btn" type="button" value="CHECK" onclick="checkAll();"/>
+        <input class="btn" type="button" value="CANCLE" onclick="cancleAll();"/>
+        <input class="btn" type="button" value="REVERSE" onclick=" reverseAll();"/>
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>check</th>
+                <th>name</th>
+                <th>sex</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Valentina</td>
+                <td>F</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Tony</td>
+                <td>M</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Yibo</td>
+                <td>M</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="../jquery-3.2.1.js"></script>
+    <script>
+
+        function checkAll() {
+            $(':checkbox').prop('checked',true);
+        }
+        function cancleAll() {
+            $(':checkbox').prop('checked',false);
+        }
+        function reverseAll(){
+            $(':checkbox').each(function () {
+                if($(this).prop('checked')){
+                    $(this).prop('checked',false);
+                }else{
+                    $(this).prop('checked',true);
+                }
+            })
+        }
+    </script>
+</body>
+</html>

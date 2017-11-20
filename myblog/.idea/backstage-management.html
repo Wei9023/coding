@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .pg-header{
+            background-color: #5b6391;
+            height: 100px;
+            left:0;
+            top:0;
+            background: rgba(91,99,145,0.5);
+            line-height: 100px;
+            position: relative;
+            z-index: 8;
+        }
+        .pg-header .logo{
+            position: absolute;
+            z-index:9;
+            background-size: contain;
+            display: inline-block;
+            height: 70px;
+            width: 200
+            px;
+            margin: 15px;
+            padding:5px;
+        }
+
+        .pg-header .icons{
+            padding:0 20px;
+        }
+        .pg-body .menu{
+            background-color: #5b6391;
+            background: rgba(91,99,145,0.5);
+            min-width:200px;
+            position: absolute;
+            z-index: 9;
+            left: 0;
+            top: 100px;
+            bottom: 0;
+        }
+
+        .menu .s-header{
+            background-color:#5b6391;
+            heigth:40px;
+            width: 180px;
+            text-align: center;
+            margin:10px;
+            padding: 5px;
+            line-height: 40px;
+            opacity: 0.7;
+            border-radius: 3%;
+        }
+        .menu .s-content{
+            height:20px;
+            width:180px;
+            background-color:#9ea0a9;
+            color: black;
+            line-height: 20px;
+        }
+        .pg-body .content{
+
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float:right;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-image:url(inspectionProfiles/bgimage1.jpg);
+    position: absolute;left: 0;right: 0;height: 100%;width: 100%;margin:0px;padding:0px;z-index:7">
+    <div class="pg-header">
+        <img class="logo left" src="logo4.png"></img>
+        <div class="user right">
+            <a><img src="username.jpg" style="position:absolute; right:150px; top: 30px;
+                height:40px; width:40px; border-radius: 50%; margin-top: 4px;"/></a>
+
+        </div>
+        <div class="icons right">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+            <span style="border-radius: 50%; display: inline-block; padding:10px 7px; right:300px; line-height: 1px;
+                background-color:powderblue; font-size: 12px;">5</span>
+        </div>
+    </div>
+    <div class="pg-body">
+        <div class="menu left">
+            <div class="item">
+                <div id='i1' class="s-header" onclick="changemenu(i1)">Menu1</div>
+                <div class="s-content hide">
+                    <div>Content1</div>
+                    <div>Content1</div>
+                    <div>Content1</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i2' class="s-header" onclick="changemenu(i2)">Menu2</div>
+                <div class="s-content hide">
+                    <div>Content2</div>
+                    <div>Content2</div>
+                    <div>Content2</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i3' class="s-header" onclick="changemenu(i3)">Menu3</div>
+                <div class="s-content hide">
+                    <div>Content3</div>
+                    <div>Content3</div>
+                    <div>Content3</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i4' class="s-header" onclick="changemenu(i4)">Menu4</div>
+                <div class="s-content hide">
+                    <div>Content4</div>
+                    <div>Content4</div>
+                    <div>Content4</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i5' class="s-header" onclick="changemenu(i5)">Menu5</div>
+                <div class="s-content hide">
+                    <div>Content5</div>
+                    <div>Content5</div>
+                    <div>Content5</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i6' class="s-header" onclick="changemenu(i6)">Menu6</div>
+                <div class="s-content hide">
+                    <div>Content6</div>
+                    <div>Content6</div>
+                    <div>Content6</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i7' class="s-header" onclick="changemenu(i7)">Menu7</div>
+                <div class="s-content hide">
+                    <div>Content7</div>
+                    <div>Content7</div>
+                    <div>Content7</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i8' class="s-header" onclick="changemenu(i8)">Menu8</div>
+                <div class="s-content hide">
+                    <div>Content8</div>
+                    <div>Content8</div>
+                    <div>Content8</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i9' class="s-header" onclick="changemenu(i9)">Menu9</div>
+                <div class="s-content hide">
+                    <div>Content9</div>
+                    <div>Content9</div>
+                    <div>Content9</div>
+                </div>
+                </div>
+            <div class="item">
+                <div id='i10' class="s-header" onclick="changemenu(i10)">Menu10</div>
+                <div class="s-content hide">
+                    <div>Content10</div>
+                    <div>Content10</div>
+                    <div>Content10</div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="content" style="position: absolute; top:100px; right:0;bottom:0; background-color: white;">
+
+        </div>
+        <i class="fa fa-bell-o" aria-hidden="true"></i>
+    </div>
+</body>
+</html>

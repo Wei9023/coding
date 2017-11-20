@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .menu{
+            height:38px;
+            background-color: lightgrey;
+            line-height:38px;
+        }
+        .menu-item{
+            float: left;
+            border-right:1px solid red;
+            padding:0 5px;
+            cursor: pointer;
+        }
+        .content{
+            min-height: 150px;
+            border:1px solid goldenrod;
+        }
+        .hide{
+            display: none;
+        }
+        .active{
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="width:700px; margin: 0 auto">
+        <div class="menu">
+            <div class="menu-item active" a="1">NEW CARS</div>
+            <div class="menu-item" a="2">USED CARS</div>
+            <div class="menu-item" a="3">CUSTOM SERVICE</div>
+        </div>
+        <div class="content">
+            <div b="1">
+                <p>AUDI</p>
+                <p>BMW</p>
+                <p>CADILAC</p>
+            </div>
+            <div class="hide" b="2">
+                <p>LEXUS</p>
+                <p>HONDA</p>
+                <p>TOYOTA</p>
+            </div>
+            <div class="hide" b="3">
+                <p>CHAT</p>
+                <p>PHONECALL</p>
+                <p>EMAIL</p>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $('.menu-item').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            var target = $(this).attr('a');
+            //console.log(target);
+            $('.content').children("[b='"+target+"']").removeClass('hide').siblings().addClass('hide');
+        })
+    </script>
+</body>
+</html>

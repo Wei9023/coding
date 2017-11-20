@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>top menu and go back to top</title>
+</head>
+    <style>
+        .pg-header{
+            height: 60px;
+            background-color: darkslateblue;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            line-height: 60px;
+        }
+        .pg-header.menu{
+            display: inline-block;
+            padding:0 10px 0 10px;
+            color: white;
+        }
+        .pg-header.menu:hover{
+            background-color: blueviolet;
+        }
+        .pg-body{
+            height: 5000px;
+            background-color: lavender;
+            color: dimgrey;
+            margin-top: 65px;
+        }
+        .w{
+            width:980px;
+            margin:0 auto;
+        }
+    </style>
+<body>
+    <div onclick="GoTop();" style = "width: 80px; height: 50px; background-color: powderblue; color: navy;
+        position: fixed;
+        bottom: 20px;
+        right: 20px">Back To Top
+    </div>
+    <div class = "pg-header">
+        <div class="w">
+            <a class="logo">TRISFER</a>
+            <a class="menu">FLIGHT</a>
+            <a class="menu">HOTEL</a>
+            <a class="menu">RENTAL CAR</a>
+            <a class="menu">TRAVEL</a>
+        </div>
+    </div>
+    <div class = "pg-body">
+        <div class="w">CONTENT</div>
+    </div>
+</body>
+<script type="text/javascript">
+    alert(1);
+    function GoTop(){
+        document.body.ScrollTop = 0;
+        alert(2);
+    }
+</script>
+</html>

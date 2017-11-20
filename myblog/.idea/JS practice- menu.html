@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .item. header{
+            height:30px;
+            width:300px;
+            background-color: green;
+            color: white;
+            line-height: 30px;
+        }
+        .item. content{
+            height:20px;
+            width:300px;
+            background-color: chartreuse;
+            color: black;
+            line-height: 20px;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="item">
+        <div class="header" onclick="changemenu(this)">Menu1</div>
+        <div class="content hide">
+            <div>Content1</div>
+            <div>Content1</div>
+            <div>Content1</div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="header" onclick="changemenu(this)">Menu2</div>
+        <div class="content hide">
+            <div>Content2</div>
+            <div>Content2</div>
+            <div>Content2</div>
+        </div>
+        </div>
+    <div class="item">
+        <div class="header" onclick="changemenu(this)">Menu3</div>
+        <div class="content hide">
+            <div>Content3</div>
+            <div>Content3</div>
+            <div>Content3</div>
+        </div>
+        </div>
+    <div class="item">
+        <div class="header" onclick="changemenu(this)">Menu4</div>
+        <div class="content hide">
+            <div>Content4</div>
+            <div>Content4</div>
+            <div>Content4</div>
+        </div>
+        </div>
+<script type="text/javascript">
+    function changemenu(ths){
+        var current_header = ths;
+        console.log(current_header);
+        var item_list = current_header.parentNode.parentNode.children;
+        for(var i=0;i<item_list.length;i++){
+            var current_item = item_list[i];
+            current_item.children[1].classList.add('hide');
+        }
+        current_header.nextElementSibling.classList.remove('hide');
+    }
+</script>
+</body>
+</html>

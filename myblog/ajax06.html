@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new html element</title>
+</head>
+<body>
+<div id = "div1">
+    <p id = "p1">first paragraph</p>
+    <p id = "p2">second paragraph</p>
+</div>
+<script>
+    var param = document.createElement('p');
+    var node = document.createTextNode("This is a new text");
+    param.appendChild(node);
+    var ele = document.getElementById("div1");
+    ele.appendChild(param)
+
+
+    for(var key in data){
+        str += key +'='+ data[key] + '&'
+        data = str.replace(/&$/,'')
+    }
+</script>
+</body>
+</html>

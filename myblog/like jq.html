@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>like</title>
+    <style>
+        .container{
+            padding:50px;
+            border:1px solid green;
+        }
+        .item{
+            position: relative;
+            width:30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <span>LIKE</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <span>LIKE</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <span>LIKE</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <span>LIKE</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="item">
+            <span>LIKE</span>
+        </div>
+    </div>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $('.item').click(function () {
+            AddFevor(this);
+                });
+        function AddFevor(self) {
+
+            var fontSize = 15;
+            var top = 0;
+            var right = 0;
+            var opacity = 1;
+
+            var tag = document.createElement('span');
+            $(tag).text('+1');
+            $(tag).css('color','green');
+            $(tag).css('fontSize',fontSize+"px");
+            $(tag).css('position', 'absolute');
+            $(tag).css('top',top+"px");
+            $(tag).css('right', right+"px");
+            $(tag).css('opacity', opacity);
+            $(self).append(tag);
+
+            var obj=setInterval(function () {
+                fontSize = fontSize+10;
+                top = top-10;
+                right = right-10;
+                opacity = opacity-0.1;
+
+                $(tag).css('color','green');
+                $(tag).css('fontSize',fontSize+"px");
+                $(tag).css('top',top+"px");
+                $(tag).css('right', right+"px");
+                $(tag).css('opacity', opacity);
+                if(opacity<0){
+                    clearInterval(obj);
+                    $(tag).remove();
+                    }
+            },40);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="sta"></div>
+    <input  onclick="delateEle()" type="button" value="delate">
+<script type="text/javascript">
+    function delateEle() {
+        document.getElementById('sta').innerText= "already delated";
+        setTimeout(function () {
+            document.getElementById('sta').innerText='';
+        },5000);
+    }
+</script>
+</body>
+</html>

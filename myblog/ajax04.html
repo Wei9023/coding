@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Asynchronous JavaScript And XML</title>
+</head>
+<body>
+<script type = "text/javascript">
+    var xmlHttp = null;
+    function readystateChangeHandle()
+    {
+        if(xmlHttp.readyState == 4)
+        {
+           if (xmlHttp.Status != 200) {
+           } else {
+               var xmlDOM = xmlHttp.responseXML;
+               var xmlRoot = xmlDOM.documentElement;
+               try {
+                   var xmlItem = xmlRoot.getElementsByTagName("Item");
+                   alert(xmlItem[0].firstChild.data);
+               }
+               catch (e) {
+                   alert(e.message);
+               }
+           }
+        }
+
+    }
+    function ajaxRequest()
+    {
+        if(window.xmlHttpRequest);
+        {
+            xmlHttp = new XMLHttpRequest();
+        }
+        //else if(window.ActiveXObject)
+    //{
+      //  xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+    //}
+        xmlHttp.onreadystatechange = readystateChangeHandle();
+        xmlHttp.open("GET","data.xml",true);
+        xmlHttp.send(null);
+    }
+</script>
+<input type = "button" onclick = "ajaxRequest()" value = "Take me to the world of Ajax"/>
+</body>
+</html>
+//data.xml
+<?xml version = "1.0" encoding = "utf-8"?>
+<root>
+    <item>Welcome to the world of Ajax(Asynchonous JavaScript And XML)</item>
+</root>
